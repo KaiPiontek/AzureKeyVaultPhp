@@ -42,7 +42,7 @@ class VaultSecret extends AbstractVault
             return new Secret(
                 $data['id'],
                 $data['value'],
-                $data['managed'],
+                $data['managed'] ?? false,
                 $data['attributes']['enabled'],
                 $data['attributes']['created'],
                 $data['attributes']['updated'],
